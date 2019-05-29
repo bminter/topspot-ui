@@ -1,0 +1,30 @@
+query ($scoreboardId: bigint!) {
+  scoreboards_by_pk(scoreboardId: $scoreboardId) {
+    name
+    creator {
+      name
+      email
+    }
+    games {
+      gameId
+      loserScore
+      timeOfGame
+      userGameRecords {
+        user {
+          userId
+          email
+          name
+        }
+        gameOutcome
+      }
+      winnerScore
+    }
+    scoreboardMemberships {
+      user {
+        userId
+        name
+        email
+      }
+    }
+  }
+}

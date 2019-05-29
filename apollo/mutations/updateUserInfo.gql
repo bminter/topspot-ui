@@ -1,0 +1,5 @@
+mutation ($userId: bigint!, $name: String) {
+  update_users(where: {userId: {_eq: $userId}}, _set: {name: $name}) {
+    affected_rows
+  }
+}

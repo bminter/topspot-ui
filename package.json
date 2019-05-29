@@ -1,0 +1,37 @@
+{
+  "name": "topspot",
+  "version": "1.0.0",
+  "description": "An app for keeping score between friends",
+  "author": "Brian Minter",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/apollo": "^4.0.0-rc4.2",
+    "@nuxtjs/auth": "^4.5.3",
+    "@nuxtjs/axios": "^5.4.2",
+    "@nuxtjs/pwa": "^2.6.0",
+    "cookieparser": "^0.1.0",
+    "cross-env": "^5.2.0",
+    "graphql-tag": "^2.10.1",
+    "js-cookie": "^2.2.0",
+    "lodash": "^4.17.11",
+    "moment": "^2.24.0",
+    "nuxt": "^2.4.0",
+    "vuetify": "^1.5.5",
+    "vuetify-loader": "^1.2.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.5",
+    "@vue/cli-plugin-eslint": "^3.0.5",
+    "@vue/cli-service": "^3.0.5",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "nodemon": "^1.18.9",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2"
+  }
+}

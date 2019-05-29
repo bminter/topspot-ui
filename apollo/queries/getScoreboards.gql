@@ -1,0 +1,6 @@
+query($groupId: bigint!) {
+  scoreboards(where: {groupId: {_eq: $groupId}}) {
+    scoreboardId
+    name
+  }
+}

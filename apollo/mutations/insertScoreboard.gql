@@ -1,0 +1,14 @@
+mutation ($creatorId: bigint!, $name: String, $groupId: bigint!) {
+  insert_scoreboards(objects: {
+    creatorId: $creatorId, 
+    name: $name, 
+    groupId: $groupId, 
+    scoreboardMemberships: {
+      data: [{
+        userId: $creatorId
+      }]
+    }
+  }) {
+    affected_rows
+  }
+}

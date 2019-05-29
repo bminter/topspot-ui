@@ -1,0 +1,9 @@
+query ($userId: bigint!) {
+  users_by_pk(userId: $userId) {
+    name
+    currentGroupId
+    scoreboardMemberships {
+      scoreboardId
+    }
+  }
+}

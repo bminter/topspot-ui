@@ -1,0 +1,5 @@
+mutation ($groupId: bigint!, $userId: bigint!) {
+  update_users(where: {userId: {_eq: $userId}}, _set: {currentGroupId: $groupId}) {
+    affected_rows
+  }
+}

@@ -1,0 +1,15 @@
+query ($userId: bigint!) {
+  groupMemberships(where: {userId: {_eq: $userId}}) {
+    groupId
+    group {
+      groupId
+      accessCode
+      name
+      creator {
+        userId
+        name
+        email
+      }
+    }
+  }
+}

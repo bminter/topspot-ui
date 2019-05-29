@@ -1,0 +1,17 @@
+mutation(
+  $winnerScore: numeric!
+  $loserScore: numeric!
+  $scoreboardId: bigint!
+  $userGameRecords: [userGameRecords_insert_input!]!
+) {
+  insert_games(
+    objects: {
+      winnerScore: $winnerScore
+      loserScore: $loserScore
+      scoreboardId: $scoreboardId
+      userGameRecords: { data: $userGameRecords }
+    }
+  ) {
+    affected_rows
+  }
+}

@@ -1,0 +1,5 @@
+mutation ($userId: bigint!, $scoreboardId: bigint!) {
+  insert_scoreboardMemberships(objects: {userId: $userId, scoreboardId: $scoreboardId}) {
+    affected_rows
+  }
+}
