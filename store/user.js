@@ -70,6 +70,7 @@ export const actions = {
       }
     });
     dispatch('scoreboards/getScoreboards', null, { root: true });
+    this.$router.push({ path: '/home' });
   }
 };
 
