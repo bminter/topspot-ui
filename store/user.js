@@ -7,7 +7,8 @@ const Cookie = process.client ? require('js-cookie') : undefined;
 
 export const state = () => ({
   currentGroupId: null,
-  scoreboardMemberships: []
+  scoreboardMemberships: [],
+  games: []
 });
 
 export const actions = {
@@ -59,6 +60,7 @@ export const actions = {
     }
     commit('setCurrentGroupId', user.currentGroupId);
     commit('setScoreboardMemberships', user.scoreboardMemberships);
+    commit('setGames', response.data.games);
   },
   updateCurrentGroupId ({ rootState, commit, dispatch }, { groupId }) {
     commit('setCurrentGroupId', groupId);
@@ -80,6 +82,9 @@ export const mutations = {
   },
   setScoreboardMemberships (state, scoreboardMemberships) {
     state.scoreboardMemberships = scoreboardMemberships;
+  },
+  setGames (state, games) {
+    state.games = games;
   }
 };
 

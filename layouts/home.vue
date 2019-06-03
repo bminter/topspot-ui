@@ -71,7 +71,12 @@
               </v-btn>
             </template>
             <v-list>
-              <v-list-tile v-for="item in extraItems" :key="item.title" :to="item.path">
+              <v-list-tile
+                v-for="item in extraItems"
+                :key="item.title"
+                @click="item.onClick"
+                :to="item.path"
+              >
                 <v-icon class="mr-2">{{ item.icon }}</v-icon>
                 <v-list-tile-title>{{ item.title }}</v-list-tile-title>
               </v-list-tile>
@@ -95,8 +100,15 @@ export default {
       loading: true,
       drawer: null,
       extraItems: [
-        { title: 'Settings', icon: 'settings', path: '/home/settings' },
-        { title: 'Logout', icon: 'exit_to_app' }
+        { title: 'Settings', icon: 'settings', onClick: () => this.$router.push({ path: '/home/settings' }), path: '/home/settings' },
+        {
+          title: 'Logout',
+          icon: 'exit_to_app',
+          onClick: () => {
+            this.$auth.logout();
+          },
+          path: '/login'
+        }
       ]
     };
   },

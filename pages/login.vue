@@ -1,6 +1,6 @@
 <template>
   <v-layout>
-    <v-flex xs12>
+    <v-flex xs12 md6 offset-md3>
       <v-container fluid fill-height>
         <v-layout align-center justify-center>
           <login-card/>

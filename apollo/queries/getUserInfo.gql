@@ -6,4 +6,17 @@ query ($userId: bigint!) {
       scoreboardId
     }
   }
+  games(where: {userGameRecords: {user: {userId: {_eq: $userId}}}}) {
+    loserScore
+    winnerScore
+    timeOfGame
+    userGameRecords {
+      user {
+        userId
+        name
+        email
+      }
+      gameOutcome
+    }
+  }
 }
